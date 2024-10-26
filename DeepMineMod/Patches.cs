@@ -104,7 +104,8 @@ namespace DeepMineMod
         static void Prefix(TerrainGeneration __instance)
         {
             WorldManager.BedrockLevel = DeepMinePlugin.BedrockDepth;
-            WorldManager.LavaLevel = DeepMinePlugin.BedrockDepth;
+            // lava deprecated
+            // WorldManager.LavaLevel = DeepMinePlugin.BedrockDepth;
         }
     }
 
@@ -134,9 +135,9 @@ namespace DeepMineMod
     }
 
     /// <summary>
-    /// Alter GPR Range
+    /// Alter GPR Range (deprecated)
     /// </summary>
-    [HarmonyPatch(typeof(PortableGPR), "Awake")]
+    /* [HarmonyPatch(typeof(PortableGPR), "Awake")]
     public class PortableGPR_Awake
     {
         static void Prefix(PortableGPR __instance)
@@ -144,4 +145,5 @@ namespace DeepMineMod
             __instance.Resolution = DeepMinePlugin.GPRRange;
         }
     }
+    */
 }
